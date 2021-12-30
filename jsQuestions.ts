@@ -1,21 +1,9 @@
-// interface questions {
-//     id: number;
-//     type: string;
-//     question: string;
-//     answers: {
-//         answer1: string;
-//         answer2: string;
-//         answer3: string;
-//         correctAnswer: string;
-//     };
-//     fullAnswer: string;
-//     level: number;
-// }
+import Iquestions from './Iquestions'
 
-const questions = [
+const questions: Array<Iquestions> = [
     {
         id: 1,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Какие типы данных есть в javaScript? Перечислите их`,
         answers: {
             answer1: '-',
@@ -29,11 +17,12 @@ const questions = [
         <b>Примитивы:</b> string, number, boolean, null, undefined, symbol, BigInt
         <br>
         <b>Объекты:</b>: Objects`,
-        level: 1
+        level: 1,
+        show: false
     },
     {
         id: 2,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое переменные?`,
         answers: {
             answer1: '-',
@@ -45,11 +34,12 @@ const questions = [
         Переменные - это зарезервированные ячейки памяти, которые хранят данные. Все переменные должны иметь свое имя. В
         Js имя переменной не может начинаться с цифр, также они регистрозависимые
         `,
-        level: 1
+        level: 1,
+        show: false
     },
     {
         id: 3,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `В чем отличия var, let, const?`,
         answers: {
             answer1: '-',
@@ -65,11 +55,12 @@ const questions = [
         <br>
         Отличия let и const в том, что мы можем переинициализировать(мутировать) let, а const мы можем инициализировать только 1 раз.
         `,
-        level: 4
+        level: 4,
+        show: false
     },
     {
         id: 4,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое функция?`,
         answers: {
             answer1: '-',
@@ -80,11 +71,12 @@ const questions = [
         fullAnswer: `
         Функция в Js - это разновидность объекта, которая используется для выполнения алгоритма поставленной ей задачи
         `,
-        level: 1
+        level: 1,
+        show: false
     },
     {
         id: 5,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `В чем отличия Function expression и Function declaration`,
         answers: {
             answer1: '-',
@@ -126,11 +118,12 @@ const questions = [
         4. Отсутствие this естественным образом ведёт к другому ограничению: стрелочные функции не могут быть
         использованы как конструкторы.Они не могут быть вызваны с new.
         `,
-        level: 6
+        level: 6,
+        show: false
     },
     {
         id: 6,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `что такое hoisting (всплытие/поднятие)?`,
         answers: {
             answer1: '-',
@@ -158,11 +151,12 @@ const questions = [
         <br>
         Все необъявленные переменные это по факту глобальные переменные.
         `,
-        level: 6
+        level: 6,
+        show: false
     },
     {
         id: 7,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `что такое замыкание?`,
         answers: {
             answer1: '-',
@@ -196,11 +190,12 @@ const questions = [
         person() // 'Peter'
         </pre>
         `,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 8,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `что такое рекурсия?`,
         answers: {
             answer1: '-',
@@ -227,11 +222,12 @@ const questions = [
         </pre>
 
         `,
-        level: 4
+        level: 4,
+        show: false
     },
     {
         id: 9,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `что добавили в ES6`,
         answers: {
             answer1: '-',
@@ -281,11 +277,12 @@ const questions = [
         </pre>
         <br>
         `,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 10,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое глобальные переменные, какие проблемы могут быть с ними связаны?`,
         answers: {
             answer1: '-',
@@ -295,11 +292,12 @@ const questions = [
         },
         fullAnswer: `Глобальные переменные - переменные, которые объявлены вне какого-либо блока, и их область
         видимости весь скрипт. Из-за этого могут возникуть проблемы с инициализацией и перезаписью переменных`,
-        level: 2
+        level: 2,
+        show: false
     },
     {
         id: 11,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое ошибка undefined`,
         answers: {
             answer1: '-',
@@ -308,11 +306,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `это значит, что мы не присвоили значение переменной`,
-        level: 2
+        level: 2,
+        show: false
     },
     {
         id: 12,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `question`,
         answers: {
             answer1: '-',
@@ -321,11 +320,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `string`,
-        level: 1
+        level: 1,
+        show: false
     },
     {
         id: 13,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `В чем отличия === и == ?`,
         answers: {
             answer1: '-',
@@ -335,11 +335,12 @@ const questions = [
         },
         fullAnswer: `Строгое сравнение(===) проверяет равенство без приведения типов.
         Например если сравнить ““ и false, то результат строгого неравенства будет false,а если сравнивать не строгим, то true`,
-        level: 1
+        level: 1,
+        show: false
     },
     {
         id: 14,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое null?`,
         answers: {
             answer1: '-',
@@ -349,11 +350,12 @@ const questions = [
         },
         fullAnswer: `null - это тип примитив, который представляет отсутствие какого-либо объектного значения.
         null часто присваивается в местах где ожидается объект, но подходящего объекта нет.`,
-        level: 3
+        level: 3,
+        show: false
     },
     {
         id: 15,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `что такое свойства функций?`,
         answers: {
             answer1: '-',
@@ -364,11 +366,12 @@ const questions = [
         fullAnswer: `Функции содержат полезные свойства, которые мы можем использовать.
         Например мы можем узнать имя функции с помощью .name, или количество параметров с помощью .length.
         `,
-        level: 3
+        level: 3,
+        show: false
     },
     {
         id: 16,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое анонимные функции?`,
         answers: {
             answer1: '-',
@@ -392,11 +395,12 @@ const questions = [
           );
         </pre>
         `,
-        level: 3
+        level: 3,
+        show: false
     },
     {
         id: 17,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `какие вы знаете методы массивов, что они делают??`,
         answers: {
             answer1: '-',
@@ -426,11 +430,12 @@ const questions = [
         <br>
         sort() - сортирует на месте массив и возвращает его. Порядок cортировки по умолчанию соответствует порядку кодовых точек Unicode.
         `,
-        level: 3
+        level: 3,
+        show: false
     },
     {
         id: 18,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое Объект?`,
         answers: {
             answer1: '-',
@@ -451,11 +456,12 @@ const questions = [
         дальше по цепочке прототипов.
         <br>
         `,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 19,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Можно ли изменить содержимое объекта, если объявление произошло через const? Если да, то почему?`,
         answers: {
             answer1: '-',
@@ -464,11 +470,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `Объект можно изменить, если он объявлен через константу. const защищает от изменений только саму переменную, но не ее содержимое`,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 20,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Можем ли мы получить свойство в объекте, которого не существует?`,
         answers: {
             answer1: '-',
@@ -477,11 +484,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `Да. В отличии от других языков js может получить доступ к любому свойству. При обращении к свойству, которого нет, js зайдет в прототип объекта, если и его там нет, то вернется undefined.`,
-        level: 6
+        level: 6,
+        show: false
     },
     {
         id: 21,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Как мы можем проверить существование свойства в объекте?`,
         answers: {
             answer1: '-',
@@ -490,11 +498,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `С помощь оператора in, мы можем проверить существует ли свойство.`,
-        level: 4
+        level: 4,
+        show: false
     },
     {
         id: 22,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Упорядочены ли свойства объектов?`,
         answers: {
             answer1: '-',
@@ -504,11 +513,12 @@ const questions = [
         },
         fullAnswer: `свойства упорядочены особым образом: свойства с целочисленными ключами
         сортируются по возрастанию, остальные располагаются в порядке создания.`,
-        level: 6
+        level: 6,
+        show: false
     },
     {
         id: 23,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Как js понимает, что нужно удалить объект? какие методы используются для этого?`,
         answers: {
             answer1: '-',
@@ -534,11 +544,12 @@ const questions = [
         <br>
         сборка мусора происходит автоматически, мы не можем повлиять на нее
         `,
-        level: 8
+        level: 8,
+        show: false
     },
     {
         id: 24,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое опциональная цепочка "?" ?`,
         answers: {
             answer1: '-',
@@ -557,11 +568,12 @@ const questions = [
         alert(user?.address?.street); // undefined (без ошибки)
         </pre>
         `,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 25,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Отличия объектов от примитивных типов данных?`,
         answers: {
             answer1: '-',
@@ -596,11 +608,12 @@ const questions = [
         alert(a == b); // false
         </pre>
         `,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 26,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что делает цикл for in, и чем он опасен?`,
         answers: {
             answer1: '-',
@@ -614,11 +627,12 @@ const questions = [
         <br>
         цикл for in опасен тем, что он пробегает не только по ключам и свойствам, но и заходит в его прототип, это может привести к проблемам
         `,
-        level: 6
+        level: 6,
+        show: false
     },
     {
         id: 27,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `что происходит со старым значением в переменной, после того как мы ее переопределили?`,
         answers: {
             answer1: '-',
@@ -627,11 +641,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `при переопределении переменной, старое значение удаляется`,
-        level: 4
+        level: 4,
+        show: false
     },
     {
         id: 28,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Как будет вести себя результат вычисления, если где-то в выражении будет NaN?`,
         answers: {
             answer1: '-',
@@ -640,11 +655,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `если где-то в расчете будет NaN, то результатом вычислений с его участием будет NaN.`,
-        level: 3
+        level: 3,
+        show: false
     },
     {
         id: 29,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `чему равно сравнение null == undefined? что можете рассказать об этом сравнении?`,
         answers: {
             answer1: '-',
@@ -654,11 +670,12 @@ const questions = [
         },
         fullAnswer: `для нестрогого равенства == значений undefined и null действует особое правило:
         эти значения ни к чему не приводятся, они равны друг другу и не равны ничему другому. Поэтому null == 0 ложно.`,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 30,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Как сравниваются строки?`,
         answers: {
             answer1: '-',
@@ -667,11 +684,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `Строки сравниваются посимвольно в лексикографическом порядке`,
-        level: 4
+        level: 4,
+        show: false
     },
     {
         id: 31,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что вы можете рассказать про оператор "??"`,
         answers: {
             answer1: '-',
@@ -685,11 +703,12 @@ const questions = [
         всего потребуются скобки. Также этот оператор нельзя использовать с операторами ||, &&, но можно обойти
         это ограничение с помощью скобок.
         `,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 32,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Как можно завершить цикл, или перейти к следующей итерации цикла?`,
         answers: {
             answer1: '-',
@@ -708,11 +727,12 @@ const questions = [
         }
         </pre>
         `,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 33,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что происходит с внешней переменной, если в функции мы объявляем переменную с таким же именем`,
         answers: {
             answer1: '-',
@@ -721,11 +741,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `Если одноимённая переменная объявляется внутри функции, тогда она перекрывает внешнюю.`,
-        level: 5
+        level: 5,
+        show: false
     },
     {
         id: 34,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что такое параметр по умолчанию, как его задать?`,
         answers: {
             answer1: '-',
@@ -735,11 +756,12 @@ const questions = [
         },
         fullAnswer: `параметр по умолчанию - это значение параметра, используемое функцией, если значения параметра
         не было передано. Мы можем присвоить параметр по умолчанию, когда объявляем параметры.`,
-        level: 3
+        level: 3,
+        show: false
     },
     {
         id: 35,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Что произойдет если использовать return без значения?`,
         answers: {
             answer1: '-',
@@ -748,11 +770,12 @@ const questions = [
             correctAnswer: '-',
         },
         fullAnswer: `Пустой return аналогичен return undefined. Он приведет к немедленному выходу из функции!`,
-        level: 3
+        level: 3,
+        show: false
     },
     {
         id: 36,
-        type: 'questions',
+        type: 'javaScriptQuestions',
         question: `Почему не следует добавлять перенос строки между return и его значением?`,
         answers: {
             answer1: '-',
@@ -762,10 +785,467 @@ const questions = [
         },
         fullAnswer: `потому что код не выполнится, js подставит точку с запятой после return.
         Но можно осуществить перенос с помощью скобки после return`,
-        level: 3
+        level: 3,
+        show: false
+    },
+    {
+        id: 37,
+        type: 'javaScriptQuestions',
+        question: `функция это значение?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `да, функция это значение, и мы можем работать с ней как со значением - копировать
+        функцию в другую переменную, передавать в качестве параметра и т.д`,
+        level: 3,
+        show: false
+    },
+    {
+        id: 38,
+        type: 'javaScriptQuestions',
+        question: `Что такое callback функция?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `
+        коллбэк функция(функция обратного вызова) - функция, которая передается как аргумент другой функции.
+        <br>
+        <pre>
+        const parent = (func) => {
+            func()
+        }
+        const params = () => {
+            console.log(123)
+        }
+        parent(params) // 123
+        </pre>
+        `,
+        level: 4,
+        show: false
+    },
+    {
+        id: 39,
+        type: 'javaScriptQuestions',
+        question: `Что такое Json`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `Javascript Object Notation(json) - Формат обмена и хранения данных, основанной на javascript.`,
+        level: 3,
+        show: false
+    },
+    {
+        id: 40,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 41,
+        type: 'javaScriptQuestions',
+        question: `Что такое Ajax`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `Asynchronous Javascript and XML(Ajax) - это набор методов для веб-разработки,
+        которые позволяют веб-приложением работать асинхронно - обрабатывать любые запросы в фоновом режиме`,
+        level: 3,
+        show: false
+    },
+    {
+        id: 42,
+        type: 'javaScriptQuestions',
+        question: `Что такое a11y (Accessibility)`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `Accessibility - доступность клиент-ресурса, для людей с ограниченным возможностями к информации.`,
+        level: 5,
+        show: false
+    },
+    {
+        id: 43,
+        type: 'javaScriptQuestions',
+        question: `В чем отличие forEach от map?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `
+        map() может вернуть новый массив return. forEach() выбрасывает значение return и всегда возвращает undefined.
+        <br>
+        Второе различие между этими методами: map() можно привязывать к другим методам - reduce(), sort(), filter() и т.д. А вот
+        forEach(), как вы можете догадаться, возвращается undefined.
+        `,
+        level: 3,
+        show: false
+    },
+    {
+        id: 44,
+        type: 'javaScriptQuestions',
+        question: `В чем разница между объектами хоста и собственными объектами?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `
+        Встроенные объекты - основные предопределенные объекты всегда доступны в JavaScript. String , Math , RegExp , Object , Function и т.д.
+        <br>
+        Объекты хоста - объекты, которые предоставляются например средой браузера window , XmlHttpRequest, DOM и т.д. Они отличаются
+        от встроенных объектов, поскольку не во всех средах будут одни и те же объекты хоста.
+        <br>
+        Объекты пользователя - объекты, определенные в коде пользователем
+        `,
+        level: 7,
+        show: false
+    },
+    {
+        id: 45,
+        type: 'javaScriptQuestions',
+        question: `Что такое тернарный оператор, почему он так называется`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `тернарный оператор - оператор "?", он так называется, потому что может
+        применяться к 3 операндам. Его логика - Условие ? Ложь : правда. Запинается на правде`,
+        level: 3,
+        show: false
+    },
+    {
+        id: 46,
+        type: 'javaScriptQuestions',
+        question: `что такое функции высшего порядка?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `Это функция, принимающая в качестве аргументов другие функции или возвращающая другую функцию в качестве результата`,
+        level: 3,
+        show: false
+    },
+    {
+        id: 47,
+        type: 'javaScriptQuestions',
+        question: `Что происходит с массивами, когда мы пытаемся их сложить?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `Массивы не имеют ни Symbol.toPrimitive, ни функционирующего valueOf,
+        они реализуют только преобразование toString,таким образом,
+        здесь [] становится пустой строкой, [1] становится "1", а [1,2] становится "1,2".`,
+        level: 5,
+        show: false
+    },
+    {
+        id: 48,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 49,
+        type: 'javaScriptQuestions',
+        question: `Почему js не может работать напрямую с памятью компьютера?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `Потому что js интерпретируемый язык, и за его выполнение отвечает браузер,
+        который не дает возможность взаимодействовать на память компьютера напрямую`,
+        level: 6,
+        show: false
+    },
+    {
+        id: 50,
+        type: 'javaScriptQuestions',
+        question: `Что происходит, когда мы вводим url в адресную строку и нажимаем enter?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `Браузер ищет сервер по IP адресу, устанавливает соединение, отправляет HTTP запрос
+        на получение контента, первым приходит HTML файл, который браузер обрабатывает и при необходимости отправляет запросы на 
+        получение js файлов, css стилей и т.д`,
+        level: 6,
+        show: false
+    },
+    {
+        id: 51,
+        type: 'javaScriptQuestions',
+        question: `В чем отличия неопределенной переменной и необъявленной?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `
+        Неопределенная переменная - это переменная, которую мы объявили, но на данный момент не содержит никакого значения
+        <br>
+        необъявленная переменная - это переменная, которая была формально не объявлена в доступной области видимости
+        `,
+        level: 4,
+        show: false
+    },
+    {
+        id: 52,
+        type: 'javaScriptQuestions',
+        question: `Почему мы можем обратиться к свойству примитивного типа, ведь это примитив?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `JS прототипно-наследуемый язык, при обращении к свойству примитива js под капотом создает объект-обертку,
+        который наследует все свойства и методы глобального объекта того типа данных, к которому мы обратились.`,
+        level: 6,
+        show: false
+    },
+    {
+        id: 53,
+        type: 'javaScriptQuestions',
+        question: `Как проверить число на NaN?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `
+        Существует несколько способов проверить число на тип NaN - Object.is() isNaN() Полифилл
+        <br>
+        Рекомендуется использовать 1 вариант, т.к он даст точный результат. Функция isNaN() слишком буквально сравнивает на NaN,
+        например функция вернет true, если значение будет undefined,
+        NaN, {}, 'someString'. Это происходит потому что значение приводится к числу, и оно является NaN
+        `,
+        level: 5,
+        show: false
+    },
+    {
+        id: 54,
+        type: 'javaScriptQuestions',
+        question: `Как работает eventLoop?`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: `
+        Javascript - однопоточный, асинхронный язык. Асинхронность достигается благодаря eventLoop.
+        <br>
+        Когда браузер начинает интерпретировать наш код, то он делает это синхронно. Синхронные операции он помещает в callStack где они выполняются
+        в порядке очереди (последний зашел - первый вышел). Если интерпретатор видит асинхронную операцию, например: setTimeout, Promise,
+        event press key и т.д, то он берет эту операцию и помещает в Task Queue(очередь),
+        и продолжает выполнение кода. В это время Task Queue "ждет" пока асинхронная операция завершится, и после этого помещает её в callStack,
+        где она выполнится.
+        <br>
+        Task Queue - делится на микро и макротаски. в микро таски попадают промисы, в макротаски все остальное. <b>у микротасок (промисов)
+        приоритет выше, чем у макротасок, поэтому они выполняются раньше.</b>
+        <br>
+        <pre>
+        console.log(1)
+        setTimeout(() => {
+          console.log(2)
+        }, 0)
+
+        new Promise((resolve, reject) => {
+          resolve()
+        }).then(() => console.log(3))
+
+        console.log(4)
+        // result 1 4 3 2
+        </pre>
+        `,
+        level: 7,
+        show: false
+    },
+    {
+        id: 55,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 56,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 57,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 58,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 59,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 60,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 61,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 62,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 63,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
+    },
+    {
+        id: 64,
+        type: 'javaScriptQuestions',
+        question: `ABRA`,
+        answers: {
+            answer1: '-',
+            answer2: '-',
+            answer3: '-',
+            correctAnswer: '-',
+        },
+        fullAnswer: ``,
+        level: 3,
+        show: false
     },
 ];
-
-const a = document.getElementById('asd')
-const t = questions[4].fullAnswer
-a.innerHTML = t
