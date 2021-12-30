@@ -1,4 +1,4 @@
-import Iquestions from './Iquestions'
+import Iquestions from '../models/Iquestions'
 
 const questions: Array<Iquestions> = [
     {
